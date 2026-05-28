@@ -29,15 +29,19 @@ A knowledge item intended to survive beyond the current conversation or day. Eve
 _Avoid_: note, page, file
 
 **Record Contract**:
-The mandatory metadata every Durable Record must provide: stable identity, type, summary, status, sensitivity, storage rule, sync rule, and last update date.
+The mandatory metadata every Durable Record must provide: stable identity, title, summary, tags, status, sensitivity, creation date, last meaningful update date, and source.
 _Avoid_: frontmatter, schema, metadata
+
+**Tags**:
+Keywords that describe the information captured by a Durable Record. Tags combine with the summary to support retrieval, review, graph generation, and Context Pack generation, but do not drive behavior policy.
+_Avoid_: type, category, folder
 
 **Stable ID**:
 A permanent identifier for a Durable Record that remains valid across file renames, title changes, exports, graph indexing, and assistant references.
 _Avoid_: filename, slug, title
 
 **Sensitivity Metadata**:
-Frontmatter fields that describe how a Durable Record may be stored, committed, exported, and used by assistants. Sensitivity does not determine the folder structure.
+Frontmatter metadata that describes the behavior policy for a Durable Record: whether plaintext may be committed and whether it is included in ChatGPT Memory Digests by default. Sensitivity does not determine the folder structure.
 _Avoid_: private folder, secret section
 
 **Local-Only Record**:
@@ -60,9 +64,9 @@ _Avoid_: source file, default context, required context
 A generated Context Pack designed for manual or semi-automatic transfer into ChatGPT memory. It contains durable, safe summaries rather than raw records.
 _Avoid_: ChatGPT sync, memory dump
 
-**Project Import**:
-A reviewed intake from another local project into Mneme. A Project Import summarizes relevant knowledge and must not blindly copy proprietary code, credentials, or project internals.
-_Avoid_: scrape, mirror, clone
+**Inbox**:
+A local, unprocessed intake area for raw material that may later become Durable Records. Inbox material is not canonical, does not follow the Record Contract, and is excluded from Git.
+_Avoid_: import, record, source
 
 ## Relationships
 
@@ -71,20 +75,21 @@ _Avoid_: scrape, mirror, clone
 - **Mneme** contains zero or more **Durable Records**.
 - A **Durable Record** has exactly one **Stable ID**.
 - A **Durable Record** follows the **Record Contract**.
+- A **Durable Record** has zero or more **Tags**.
 - A **Durable Record** has **Sensitivity Metadata**.
 - A **Local-Only Record** is a **Durable Record** excluded from Git.
 - An **Encrypted Record** is a **Durable Record** whose committed representation is ciphertext.
 - A **Context Pack** is generated from **Mneme** and is never the source of truth.
 - A **Distribution Artifact** is generated from **Mneme** and is never loaded by default.
 - A **ChatGPT Memory Digest** is a **Context Pack** intended for ChatGPT memory.
-- A **Project Import** feeds reviewed knowledge into **Mneme**.
+- The **Inbox** may feed reviewed knowledge into **Durable Records**.
 
 ## Example Dialogue
 
 **Agent**: "Should I add this preference to the ChatGPT Memory Digest?"
 
-**Giacomo**: "Only if the Sensitivity Metadata allows ChatGPT summaries."
+**Giacomo**: "Only if the Sensitivity Metadata allows ChatGPT Memory Digest inclusion."
 
-**Agent**: "This Durable Record is marked `storage: local_only` and `sync.chatgpt: none`, so I will keep it out of the Context Pack."
+**Agent**: "This Durable Record is marked `sensitivity: restricted`, so I will keep it out of the Context Pack."
 
-**Giacomo**: "Good. The folder can stay under work because the topic is work, but the sensitivity rules decide where it can be synced."
+**Giacomo**: "Good. The folder can stay under work because the topic is work, but sensitivity decides the behavior policy."
