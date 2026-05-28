@@ -1,0 +1,11 @@
+# Local-only records and generated private artifacts
+local/
+dist/private/
+dist/tmp/
+
+# Ephemeral bundles and reports
+dist/*.zip
+*.tmp
+
+# OS/editor noise
+.DS_Store
