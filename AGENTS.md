@@ -17,3 +17,17 @@ More narrow instructions:
 - [Sensitivity and export rules](docs/agents/sensitivity.md)
 - [Source-of-truth rules](docs/agents/source-of-truth.md)
 - [Development workflow](docs/agents/development.md)
+
+## Agent skills
+
+### Issue tracker
+
+Issues and PRDs are tracked in GitHub Issues for `giacomoguidotto/mneme`. See `docs/agents/issue-tracker.md`.
+
+### Triage labels
+
+Use the default five-label triage vocabulary. See `docs/agents/triage-labels.md`.
+
+### Domain docs
+
+This is a single-context repo: read root `CONTEXT.md` and relevant ADRs under `docs/adr/`. See `docs/agents/domain.md`.
