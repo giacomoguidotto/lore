@@ -1,29 +1,28 @@
 # Mneme
 
-Mneme is Giacomo's local-first personal context system: a structured, private knowledge base for durable facts, preferences, history, projects, and current experience.
+Mneme is Giacomo's local-first personal context repository.
 
-The canonical source lives in this repository. Assistant-facing outputs are generated on demand and are never the source of truth.
+The source of truth is Durable Records plus the small amount of repo policy needed to keep them safe and searchable. Generated outputs under `dist/` are never canonical.
 
-## Navigation
+Agents start at [AGENTS.md](AGENTS.md).
 
-- `CONTEXT.md` defines Mneme's shared language.
-- `AGENTS.md` defines how agents should inspect Mneme.
-- `docs/record-contract.md` defines required Durable Record metadata.
-- `docs/folder-structure.md` defines the initial Durable Record layout.
-- `docs/inbox-workflow.md` defines raw intake and promotion.
-- `docs/chatgpt-intake.md` defines ChatGPT-to-Mneme intake.
-- `docs/local-restore.md` defines ignored local folder restoration.
-- `docs/distribution-artifacts.md` defines generated artifact policy.
-- `docs/digest-workflow.md` defines ChatGPT Memory Digest generation.
-- `docs/graph-workflow.md` defines graph artifact generation.
-- `docs/validation.md` defines Durable Record validation.
-- `docs/v1-scope.md` defines the first usable milestone.
-- `docs/adr/` records non-obvious decisions when they are hard to reverse.
+## Core
 
-## Core Rules
+- `records/active/`: current committed Durable Records.
+- `records/archived/`: historical committed Durable Records, excluded from default retrieval.
+- `restricted/`: local-only plaintext restricted records.
+- `inbox/`: ignored raw intake, not canonical.
+- `dist/`: generated artifacts, not loaded by default.
+- `docs/record-contract.md`: required Durable Record frontmatter.
 
-- Load narrowly: inspect only records relevant to the current task.
-- Keep sensitivity as metadata, not folder structure.
-- Use stable IDs for durable records.
-- Generate graph and distribution artifacts from source records.
-- Treat ChatGPT memory as a downstream digest, not canonical storage.
+Validate with:
+
+```sh
+mise exec -- cargo run --quiet --bin validate-records
+```
+
+## External Discovery
+
+The cross-project rule belongs in global or other-project instructions, not in this repo's `AGENTS.md`:
+
+> When a task depends on Giacomo's durable personal context, consult `/Users/giacomo/dev/life/mneme/AGENTS.md`, then load only the relevant Mneme records.

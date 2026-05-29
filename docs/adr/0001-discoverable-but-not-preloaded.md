@@ -4,14 +4,10 @@ status: accepted
 
 # Keep Mneme Discoverable But Not Preloaded
 
-Mneme should be available to agents through a concise global discovery instruction, but agents should not load broad Mneme context by default. This preserves context-window hygiene while still allowing durable personal knowledge to improve answers when the task actually depends on Giacomo's preferences, history, current state, or ongoing projects.
+Mneme should be available to agents through global or other-project instructions, but broad Mneme context should not be preloaded by default.
 
-## Considered Options
-
-- Always preload a generated Mneme context pack.
-- Require every project to opt into Mneme locally.
-- Use a global discovery instruction with narrow loading.
+The discovery rule does not belong in this repo's `AGENTS.md`; that file is for agents already working inside Mneme.
 
 ## Consequences
 
-Agents must decide whether Mneme is relevant before inspecting it, and then load only the records needed for the task. Generated distribution artifacts remain on-demand outputs, not default context.
+External agents should consult Mneme only when the task depends on Giacomo's durable personal context, then narrow-load relevant records. Generated artifacts remain on-demand outputs, not default context.
