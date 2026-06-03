@@ -1,10 +1,10 @@
 # Domain Docs
 
-Mneme is a single-context repo.
+Mneme is a single-context infrastructure repo for a Notion-backed knowledge system.
 
 - Use root `CONTEXT.md` for vocabulary.
 - Use `docs/adr/` for policy decisions that touch the change.
-- Use `docs/record-contract.md` for Durable Record shape.
+- Use `docs/record-contract.md` for local support-record shape.
 
 When writing issue titles, test names, docs, or refactor proposals, prefer terms from `CONTEXT.md`.
 

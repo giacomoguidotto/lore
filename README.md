@@ -1,19 +1,21 @@
 # Mneme
 
-Mneme is Giacomo's local-first personal context repository.
+Mneme is Giacomo's local infrastructure repo for his Notion knowledge system.
 
-The source of truth is Durable Records plus the small amount of repo policy needed to keep them safe and searchable. Generated outputs under `dist/` are never canonical.
+Notion is the source of truth for personal knowledge, tasks, projects, and portfolio facts. Mneme keeps the repo policy, schemas, validators, support records, exports, and generated context packs that make the Notion workspace usable by Codex, ChatGPT, and other agents.
+
+Local records are support artifacts: migration seeds, historical snapshots, or Notion-derived retrieval aids. Generated outputs under `dist/` are never canonical.
 
 Agents start at [AGENTS.md](AGENTS.md).
 
 ## Core
 
-- `records/active/`: current committed Durable Records.
-- `records/archived/`: historical committed Durable Records, excluded from default retrieval.
+- `records/active/`: current committed support records.
+- `records/archived/`: historical support records, excluded from default retrieval.
 - `restricted/`: local-only plaintext restricted records.
-- `inbox/`: ignored raw intake, not canonical.
-- `dist/`: generated artifacts, not loaded by default.
-- `docs/record-contract.md`: required Durable Record frontmatter.
+- `inbox/`: ignored raw intake, not a source of truth.
+- `dist/`: generated Notion snapshots, reports, digests, and context packs.
+- `docs/record-contract.md`: required support-record frontmatter.
 
 Validate with:
 
@@ -25,4 +27,4 @@ mise exec -- cargo run --quiet --bin validate-records
 
 The cross-project rule belongs in global or other-project instructions, not in this repo's `AGENTS.md`:
 
-> When a task depends on Giacomo's durable personal context, consult `/Users/giacomo/dev/life/mneme/AGENTS.md`, then load only the relevant Mneme records.
+> When a task depends on Giacomo's durable personal context, search Notion first. If the agent cannot reach Notion directly or needs repo-local infrastructure, consult `/Users/giacomo/dev/life/mneme/AGENTS.md`, then narrow-load only the relevant Mneme docs, exports, or support records.

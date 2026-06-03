@@ -2,11 +2,13 @@
 
 ## Glossary
 
-**Mneme**: The canonical local-first repository for Giacomo's durable personal context.
+**Mneme**: Local agent infrastructure for Giacomo's Notion knowledge system.
 
-**Durable Record**: A Markdown knowledge item meant to survive beyond a conversation.
+**Notion Source**: The canonical workspace for Giacomo's personal knowledge, tasks, projects, and portfolio facts.
 
-**Record Contract**: The required frontmatter for every Durable Record.
+**Support Record**: A Markdown artifact used as a migration seed, historical snapshot, or Notion-derived retrieval aid.
+
+**Record Contract**: The required frontmatter for every support record.
 
 **Stable ID**: A permanent `rec_...` identifier that survives renames, moves, and title changes.
 
@@ -16,10 +18,10 @@
 
 **Inbox**: Ignored raw intake. It is not canonical and is not validated.
 
-**Restricted Record**: A Durable Record whose plaintext must stay outside committed `records/`.
+**Restricted Record**: A support record whose plaintext must stay outside committed `records/`.
 
-**Archived Record**: A Durable Record kept for history and excluded from default retrieval.
+**Archived Record**: A support record kept for history and excluded from default retrieval.
 
 **Distribution Artifact**: A generated output under `dist/`. It is never source of truth.
 
-**ChatGPT Memory Digest**: A reviewable generated artifact for transferring safe summaries into ChatGPT memory.
+**ChatGPT Memory Digest**: A reviewable generated artifact for transferring routing-safe summaries into ChatGPT or Codex memory.

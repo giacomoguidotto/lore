@@ -1,8 +1,10 @@
 # Agent Instructions
 
-You are inside Mneme, Giacomo's local-first personal context repository.
+You are inside Mneme, Giacomo's local infrastructure repo for his Notion knowledge system.
 
-Start with [agent navigation](docs/agents/navigation.md). It contains the record loading, sensitivity, source-of-truth, and validation rules.
+Notion is the source of truth for Giacomo's personal knowledge, tasks, projects, and portfolio facts. Mneme supports agents with repo policy, support records, exports, validation, and generated context packs.
+
+Start with [agent navigation](docs/agents/navigation.md). It contains the Notion-first source-of-truth, loading, sensitivity, and validation rules.
 
 Use Rust through `mise`:
 
