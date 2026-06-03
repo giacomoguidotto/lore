@@ -1,7 +1,7 @@
 ---
 id: rec_bee67d8e93
 title: Brainboard Notion Task System
-summary: Notes about Giacomo's Brainboard Notion workspace, its Tasks database, and the current planning-model mismatch to address before syncing.
+summary: Notes about Giacomo's canonical Brainboard Notion workspace, its Tasks database, and the current planning-model mismatch to address before automation.
 tags:
   - notion
   - productivity
@@ -17,12 +17,12 @@ source: conversation
 
 Captured from a conversation on 2026-06-03. Do not modify the Notion workspace unless Giacomo explicitly asks for a concrete Notion change.
 
-## External System
+## Canonical System
 
-- Brainboard is Giacomo's Notion workspace for life-planning notes and tasks.
+- Brainboard is Giacomo's canonical Notion workspace for life-planning notes and tasks.
 - The Brainboard workspace contains a Tasks database that currently tracks Giacomo's task lanes and sub-items.
-- Mneme acknowledges Brainboard as an external working system, but Mneme remains the local-first durable source for long-lived personal context.
-- Giacomo's eventual plan is to sync the Notion workspace too, but not yet.
+- Mneme supports Brainboard by documenting schema decisions, keeping migration/export artifacts, and helping agents reason over Notion-derived context.
+- Mneme must not diverge from Brainboard; if Notion and a local support artifact disagree, prefer Notion unless Giacomo identifies the local artifact as the freshest migration source.
 
 ## Observed Tasks Database Shape
 
@@ -46,9 +46,9 @@ Captured from a conversation on 2026-06-03. Do not modify the Notion workspace u
 - `earn` being high-priority but marked noise conflicts with Giacomo's stated revenue-optimization model.
 - Build projects can belong to a signal lane while still requiring one active bet to be chosen at a time.
 
-## Future Sync Direction
+## Future Infrastructure Direction
 
-- Before syncing or restructuring Notion, separate strategic classification from workflow state.
+- Before automating exports or restructuring Notion, separate strategic classification from workflow state.
 - Candidate strategic classification: Signal, Foundation, Noise.
 - Candidate workflow state: To do, Active, Wait, Done.
 - Keep any future Notion migration non-destructive until the model has been reviewed.
