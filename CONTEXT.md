@@ -2,13 +2,29 @@
 
 ## Glossary
 
-**Mneme**: Local agent infrastructure for Giacomo's Notion knowledge system.
+**Mneme**: Giacomo's Notion Knowledge Gateway.
+_Avoid_: second brain, source of truth
+
+**Notion Knowledge Gateway**: A local repo that makes Giacomo's canonical Notion workspace legible, auditable, and usable by agents.
+_Avoid_: personal knowledge base, memory store
 
 **Notion Source**: The canonical workspace for Giacomo's personal knowledge, tasks, projects, and portfolio facts.
 
 **Support Record**: A Markdown artifact used as a migration seed, historical snapshot, or Notion-derived retrieval aid.
 
 **Record Contract**: The required frontmatter for every support record.
+
+**Workflow**: The casual umbrella name for an agent-enabled process described by an Automation Definition.
+_Avoid_: automation run, background job
+
+**Automation Definition**: A repo-owned description of an agent workflow's purpose, inputs, outputs, permissions, and validation rules.
+_Avoid_: automation run, source of truth
+
+**Automation Runtime**: The external system that executes an automation definition, such as Codex, a scheduled agent, or Notion automation.
+_Avoid_: Mneme-owned background process
+
+**Clarification Request**: A question created when Notion state is incomplete, ambiguous, or unsafe to sync without Giacomo's answer.
+_Avoid_: notification, reminder
 
 **Stable ID**: A permanent `rec_...` identifier that survives renames, moves, and title changes.
 

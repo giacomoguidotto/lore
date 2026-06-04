@@ -16,6 +16,7 @@ Agents start at [AGENTS.md](AGENTS.md).
 - `inbox/`: ignored raw intake, not a source of truth.
 - `dist/`: generated Notion snapshots, reports, digests, and context packs.
 - `docs/record-contract.md`: required support-record frontmatter.
+- `docs/workflows.md`: supported agent workflows around Notion.
 
 Validate with:
 
