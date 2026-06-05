@@ -1,8 +1,8 @@
-# Mneme
+# Lore
 
 ## Glossary
 
-**Mneme**: Giacomo's Notion Knowledge Gateway.
+**Lore**: Giacomo's Notion Knowledge Gateway.
 _Avoid_: second brain, source of truth
 
 **Notion Knowledge Gateway**: A local repo that makes Giacomo's canonical Notion workspace legible, auditable, and usable by agents.
@@ -21,7 +21,7 @@ _Avoid_: automation run, background job
 _Avoid_: automation run, source of truth
 
 **Automation Runtime**: The external system that executes an automation definition, such as Codex, a scheduled agent, or Notion automation.
-_Avoid_: Mneme-owned background process
+_Avoid_: Lore-owned background process
 
 **Clarification Request**: A question created when Notion state is incomplete, ambiguous, or unsafe to sync without Giacomo's answer.
 _Avoid_: notification, reminder

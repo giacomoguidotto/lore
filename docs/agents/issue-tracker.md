@@ -1,6 +1,6 @@
 # Issue Tracker: GitHub
 
-Issues and PRDs live in GitHub Issues for `giacomoguidotto/mneme`. Use `gh` from this clone.
+Issues and PRDs live in GitHub Issues for `giacomoguidotto/lore`. Use `gh` from this clone.
 
 - Create: `gh issue create --title "..." --body "..."`
 - Read: `gh issue view <number> --comments`

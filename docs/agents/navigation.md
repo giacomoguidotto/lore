@@ -1,6 +1,6 @@
 # Agent Navigation
 
-Mneme is small on purpose. Notion is the source of truth; this repo is agent infrastructure around it. Load only what the task needs.
+Lore is small on purpose. Notion is the source of truth; this repo is agent infrastructure around it. Load only what the task needs.
 
 ## Start
 

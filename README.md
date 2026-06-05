@@ -1,8 +1,8 @@
-# Mneme
+# Lore
 
-Mneme is Giacomo's local infrastructure repo for his Notion knowledge system.
+Lore is Giacomo's local infrastructure repo for his Notion knowledge system.
 
-Notion is the source of truth for personal knowledge, tasks, projects, and portfolio facts. Mneme keeps the repo policy, schemas, validators, support records, exports, and generated context packs that make the Notion workspace usable by Codex, ChatGPT, and other agents.
+Notion is the source of truth for personal knowledge, tasks, projects, and portfolio facts. Lore keeps the repo policy, schemas, validators, support records, exports, and generated context packs that make the Notion workspace usable by Codex, ChatGPT, and other agents.
 
 Local records are support artifacts: migration seeds, historical snapshots, or Notion-derived retrieval aids. Generated outputs under `dist/` are never canonical.
 
@@ -28,4 +28,4 @@ mise exec -- cargo run --quiet --bin validate-records
 
 The cross-project rule belongs in global or other-project instructions, not in this repo's `AGENTS.md`:
 
-> When a task depends on Giacomo's durable personal context, search Notion first. If the agent cannot reach Notion directly or needs repo-local infrastructure, consult `/Users/giacomo/dev/life/mneme/AGENTS.md`, then narrow-load only the relevant Mneme docs, exports, or support records.
+> When a task depends on Giacomo's durable personal context, search Notion first. If the agent cannot reach Notion directly or needs repo-local infrastructure, consult `/Users/giacomo/dev/life/lore/AGENTS.md`, then narrow-load only the relevant Lore docs, exports, or support records.

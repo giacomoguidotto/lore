@@ -1,6 +1,6 @@
 # Workflows
 
-Mneme defines workflows; external runtimes execute them. Notion remains the source of truth.
+Lore defines workflows; external runtimes execute them. Notion remains the source of truth.
 
 ## 1. Capture
 
@@ -20,7 +20,7 @@ Rule: Sync may run even when there is no Notion diff if unresolved Clarification
 
 ## 2a. Codex Sync
 
-Codex Sync is a no-op. Codex should follow its instructions, consult Mneme only when needed, and narrow-load the repo's validated context packs or support docs.
+Codex Sync is a no-op. Codex should follow its instructions, consult Lore only when needed, and narrow-load the repo's validated context packs or support docs.
 
 ## 2b. ChatGPT Sync
 
@@ -36,7 +36,7 @@ Trigger: manual or scheduled generation, after the portfolio architecture is des
 
 Flow: use Notion-backed profile, project, and career facts to generate portfolio data or UI.
 
-Rule: the portfolio must not invent claims. Whether the portfolio fetches from Mneme, Notion, or a generated artifact is unresolved and needs a dedicated architecture pass.
+Rule: the portfolio must not invent claims. Whether the portfolio fetches from Lore, Notion, or a generated artifact is unresolved and needs a dedicated architecture pass.
 
 ## 4. Govern
 
@@ -50,4 +50,4 @@ Rule: Govern is for holes and drift, not routine syncing.
 
 - Initial migration from old support records into Notion is a one-time project.
 - Runtime setup for Telegram, Slack, OpenClaw, browser automation, cron, or CI is implementation detail.
-- Mneme should not run background processes by itself.
+- Lore should not run background processes by itself.

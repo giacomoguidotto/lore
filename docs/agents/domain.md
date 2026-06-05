@@ -1,6 +1,6 @@
 # Domain Docs
 
-Mneme is a single-context infrastructure repo for a Notion-backed knowledge system.
+Lore is a single-context infrastructure repo for a Notion-backed knowledge system.
 
 - Use root `CONTEXT.md` for vocabulary.
 - Use `docs/adr/` for policy decisions that touch the change.

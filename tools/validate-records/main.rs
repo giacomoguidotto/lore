@@ -36,9 +36,9 @@ fn main() {
     }
 
     if errors.is_empty() {
-        println!("Mneme record validation passed");
+        println!("Lore record validation passed");
     } else {
-        eprintln!("Mneme record validation failed:");
+        eprintln!("Lore record validation failed:");
         for error in errors {
             eprintln!("  - {error}");
         }

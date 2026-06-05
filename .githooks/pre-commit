@@ -9,5 +9,5 @@ if command -v cargo >/dev/null 2>&1; then
   exec cargo run --quiet --bin validate-records
 fi
 
-echo "mise or cargo is required to validate Mneme records. Run: mise install" >&2
+echo "mise or cargo is required to validate Lore records. Run: mise install" >&2
 exit 1
