@@ -2,7 +2,7 @@
 
 Lore is Giacomo's local infrastructure repo for his Notion knowledge system.
 
-Notion is the source of truth for personal knowledge, tasks, projects, and portfolio facts. Lore keeps the repo policy, schemas, validators, support records, exports, and generated context packs that make the Notion workspace usable by Codex, ChatGPT, and other agents.
+Notion is the source of truth for personal knowledge, tasks, projects, and portfolio facts. Lore keeps the repo policy, validators, support records, exports, and generated context packs that make the Notion workspace usable by Codex, ChatGPT, and other agents.
 
 Local records are support artifacts: migration seeds, historical snapshots, or Notion-derived retrieval aids. Generated outputs under `dist/` are never canonical.
 
@@ -15,6 +15,7 @@ Agents start at [AGENTS.md](AGENTS.md).
 - `restricted/`: local-only plaintext restricted records.
 - `inbox/`: ignored raw intake, not a source of truth.
 - `dist/`: generated Notion snapshots, reports, digests, and context packs.
+- `skills/`: repo-owned skill definitions for Notion knowledge capture.
 - `docs/record-contract.md`: required support-record frontmatter.
 - `docs/workflows.md`: supported agent workflows around Notion.
 

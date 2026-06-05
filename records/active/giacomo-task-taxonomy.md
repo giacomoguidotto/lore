@@ -11,7 +11,7 @@ tags:
 status: active
 sensitivity: personal
 created: 2026-05-29
-updated: 2026-06-02
+updated: 2026-06-05
 source: conversation
 ---
 
@@ -21,10 +21,9 @@ Captured from a conversation and screenshots on 2026-05-29. This taxonomy operat
 
 - Giacomo divides tasks into six main categories, ordered by priority.
 - The taxonomy is meant to keep progress controllable while future gates such as applications, job offers, or program acceptances are still externally controlled.
-- Giacomo classifies the lanes using a three-value priority scale and a signal-versus-noise focus property.
-- He finds signal versus noise difficult to define, especially because short-term focus advice does not fully solve long-term life prioritization.
+- Giacomo originally classified the lanes using a three-value priority scale and a signal-versus-noise focus property.
 
-## Current Classification
+## Earlier Classification
 
 - Advance: high priority, signal.
 - Build: high priority, signal.

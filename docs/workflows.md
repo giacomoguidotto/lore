@@ -4,11 +4,15 @@ Lore defines workflows; external runtimes execute them. Notion remains the sourc
 
 ## 1. Capture
 
-Trigger: manual Codex command, starting with `/update-knowledge`.
+Trigger: manual Codex command, starting with `/dump-knowledge`; `/update-knowledge` may remain an alias.
 
-Flow: summarize the coding session's progress, decisions, tasks, blockers, and follow-ups; ask Giacomo to confirm the draft; write the approved update to Notion.
+Flow: use `skills/dump-knowledge`; inspect the live target Notion database; summarize the coding session's progress, decisions, tasks, blockers, and follow-ups; ask Giacomo to confirm the draft; write the approved update to Notion.
 
 Rule: do not write session knowledge to Notion without explicit confirmation.
+
+Rule: if the live Notion database cannot represent the update without ambiguity, ask before writing.
+
+Interactive life-context capture uses `skills/grill-knowledge`: grill one question at a time, produce a Notion draft at the end, and write only after confirmation.
 
 ## 2. Sync
 
@@ -42,7 +46,7 @@ Rule: the portfolio must not invent claims. Whether the portfolio fetches from L
 
 Trigger: rare scheduled sanity check, or manual run.
 
-Flow: inspect Notion and repo artifacts for missing information, schema holes, permission drift, sensitivity mistakes, stale context packs, or impossible states; create Clarification Requests when needed; update Notion only after Giacomo answers.
+Flow: inspect Notion and repo artifacts for missing information, permission drift, sensitivity mistakes, stale context packs, or impossible states; create Clarification Requests when needed; update Notion content only after Giacomo approves the concrete change.
 
 Rule: Govern is for holes and drift, not routine syncing.
 
