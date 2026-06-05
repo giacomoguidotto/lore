@@ -52,6 +52,5 @@ Rule: Govern is for holes and drift, not routine syncing.
 
 ## Non-Workflows
 
-- Recreating a parallel Markdown knowledge base is out of scope.
 - Runtime setup for Telegram, Slack, OpenClaw, browser automation, cron, or CI is implementation detail.
 - Lore should not run background processes by itself.
