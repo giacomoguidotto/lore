@@ -65,6 +65,8 @@ Show the exact final Notion body in a bordered preview. This body should be sour
 - No transcript/provenance framing.
 - No mention of which agent discovered the fact.
 - No local-only evidence unless it is useful knowledge, such as commit hashes or repo links.
+- Match the section names, length, and density already established in the target page and nearby sibling pages.
+- If Giacomo has manually trimmed this kind of page before, prefer the shorter pattern.
 
 ### Skipped
 
@@ -73,6 +75,8 @@ List candidate writes that were considered and skipped, with the reason.
 ### Questions
 
 Ask only for blockers that prevent a correct write. If the draft is ready, ask for approval to apply it.
+
+Approval must be fresh and explicit after the latest draft. If Giacomo asks a follow-up, corrects placement, or points to a different convention after approval, regenerate the draft and ask again before writing to Notion.
 
 ## Style
 
