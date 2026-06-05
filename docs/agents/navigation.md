@@ -17,6 +17,7 @@ Lore is small on purpose. Notion is the source of truth; this repo is agent infr
 - `docs/workflows.md` maps accepted workflow boundaries.
 - `dist/` is generated Notion snapshots, reports, digests, and context packs; never treat it as canonical.
 - If Notion and a generated artifact disagree, prefer Notion unless the user identifies the artifact as fresher.
+- In Notion, task parent pages stay thin: dashboard, status, routing, and links. Dense context belongs in child pages under the relevant parent.
 
 ## Export Safety
 

@@ -12,6 +12,8 @@ Rule: do not write session knowledge to Notion without explicit confirmation.
 
 Rule: if the live Notion database cannot represent the update without ambiguity, ask before writing.
 
+Rule: task parent pages stay thin; dense knowledge goes into child pages under the relevant Notion parent.
+
 Interactive life-context capture uses `skills/grill-knowledge`: grill one question at a time, produce a Notion draft at the end, and write only after confirmation.
 
 ## 2. Sync

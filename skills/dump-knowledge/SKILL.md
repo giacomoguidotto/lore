@@ -1,6 +1,6 @@
 ---
 name: dump-knowledge
-description: Prepare and apply Notion knowledge updates from completed agent sessions by inspecting live Notion structure, extracting session facts, and drafting exact target writes for user approval. Use when the user says /dump-knowledge, /update-knowledge, asks to dump/save/migrate session knowledge to Notion, or finishes an agent session.
+description: Prepare and apply Notion knowledge updates from completed agent sessions by inspecting live Notion structure, extracting session facts, and drafting exact target writes for user approval. Use when the user says /dump-knowledge, /update-knowledge, asks to dump/save session knowledge to Notion, or finishes an agent session.
 ---
 
 # Dump Knowledge
@@ -28,11 +28,12 @@ After an agent session, inspect Notion live, extract durable knowledge from the 
    - Links to repos, branches, commits, PRs, issues, or artifacts.
    - User preferences or personal context only when explicitly stated.
 
-4. Produce a migration draft:
+4. Produce a Notion update draft:
    - Target Notion database/page.
    - New page vs update existing page.
    - Property/value mapping, using the live Notion fields.
    - Page body draft.
+   - Parent page vs child page placement.
    - Relations or links to add.
    - Items intentionally skipped.
    - Ambiguities/questions.
@@ -76,4 +77,5 @@ Questions:
 - Never invent facts to fit a Notion field.
 - Never write before explicit approval.
 - Prefer one clear update over broad context dumps.
+- Keep Notion task parent pages short. Put dense backlog, reference notes, reflections, lessons, quotes, project evidence, and long decision context in child pages under the relevant parent.
 - If Notion access is unavailable, produce only a draft and say it was not verified against live Notion.
