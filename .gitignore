@@ -1,10 +1,6 @@
-# Local-only records and generated private artifacts
-inbox/*
-!inbox/.gitkeep
+# Local-only and generated private artifacts
 local/*
 !local/.gitkeep
-restricted/*
-!restricted/.gitkeep
 dist/private/*
 !dist/private/.gitkeep
 dist/tmp/*

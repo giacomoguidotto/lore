@@ -12,6 +12,6 @@ The discovery rule does not belong in this repo's `AGENTS.md`; that file is for 
 
 ## Consequences
 
-External agents should search Notion first when they need Giacomo's durable personal context. They should consult Lore only when they need repo-local policy, Notion export infrastructure, migration or historical support records, generated context packs, or a local fallback when Notion is unavailable.
+External agents should search Notion first when they need Giacomo's durable personal context. They should consult Lore only when they need repo-local policy, Notion export infrastructure, generated context packs, or a local fallback when Notion is unavailable.
 
-When Lore is consulted, agents should narrow-load relevant docs, exports, or support records. Generated artifacts remain on-demand outputs, not default context.
+When Lore is consulted, agents should narrow-load relevant docs, skills, exports, or generated artifacts. Generated artifacts remain on-demand outputs, not default context.

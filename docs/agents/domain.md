@@ -4,7 +4,7 @@ Lore is a single-context infrastructure repo for a Notion-backed knowledge syste
 
 - Use root `CONTEXT.md` for vocabulary.
 - Use `docs/adr/` for policy decisions that touch the change.
-- Use `docs/record-contract.md` for local support-record shape.
+- Use `docs/workflows.md` for accepted workflow boundaries.
 
 When writing issue titles, test names, docs, or refactor proposals, prefer terms from `CONTEXT.md`.
 

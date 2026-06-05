@@ -2,14 +2,14 @@
 
 You are inside Lore, Giacomo's local infrastructure repo for his Notion knowledge system.
 
-Notion is the source of truth for Giacomo's personal knowledge, tasks, projects, and portfolio facts. Lore supports agents with repo policy, support records, exports, validation, and generated context packs.
+Notion is the source of truth for Giacomo's personal knowledge, tasks, projects, and portfolio facts. Lore supports agents with workflow definitions, repo-owned skills, policy docs, and generated Notion artifacts.
 
-Start with [agent navigation](docs/agents/navigation.md). It contains the Notion-first source-of-truth, loading, sensitivity, and validation rules.
+Start with [agent navigation](docs/agents/navigation.md). It contains the Notion-first source-of-truth, loading, export-safety, and validation rules.
 
-Use Rust through `mise`:
+Validate docs and patches with:
 
 ```sh
-mise exec -- cargo run --quiet --bin validate-records
+git diff --check
 ```
 
 ## Agent skills

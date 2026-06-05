@@ -10,10 +10,6 @@ _Avoid_: personal knowledge base, memory store
 
 **Notion Source**: The canonical workspace for Giacomo's personal knowledge, tasks, projects, and portfolio facts.
 
-**Support Record**: A Markdown artifact used as a migration seed, historical snapshot, or Notion-derived retrieval aid.
-
-**Record Contract**: The required frontmatter for every support record.
-
 **Workflow**: The casual umbrella name for an agent-enabled process described by an Automation Definition.
 _Avoid_: automation run, background job
 
@@ -26,17 +22,13 @@ _Avoid_: Lore-owned background process
 **Clarification Request**: A question created when Notion state is incomplete, ambiguous, or unsafe to sync without Giacomo's answer.
 _Avoid_: notification, reminder
 
-**Stable ID**: A permanent `rec_...` identifier that survives renames, moves, and title changes.
+**Narrow Load**: Read only the Lore docs or generated artifacts relevant to the current task.
 
-**Narrow Load**: Read only the records relevant to the current task.
+**Notion Snapshot**: A generated capture of selected Notion state, used for auditability and downstream tooling.
 
-**Sensitivity**: Record behavior policy: `public`, `personal`, or `restricted`.
+**Context Pack**: A generated, scoped bundle of Notion-derived context for an agent workflow.
 
-**Inbox**: Ignored raw intake. It is not canonical and is not validated.
-
-**Restricted Record**: A support record whose plaintext must stay outside committed `records/`.
-
-**Archived Record**: A support record kept for history and excluded from default retrieval.
+**Export Safety**: The rule that generated artifacts must not expose more Notion content than their workflow needs.
 
 **Distribution Artifact**: A generated output under `dist/`. It is never source of truth.
 

@@ -46,12 +46,12 @@ Rule: the portfolio must not invent claims. Whether the portfolio fetches from L
 
 Trigger: rare scheduled sanity check, or manual run.
 
-Flow: inspect Notion and repo artifacts for missing information, permission drift, sensitivity mistakes, stale context packs, or impossible states; create Clarification Requests when needed; update Notion content only after Giacomo approves the concrete change.
+Flow: inspect Notion and repo artifacts for missing information, permission drift, export-safety mistakes, stale context packs, or impossible states; create Clarification Requests when needed; update Notion content only after Giacomo approves the concrete change.
 
 Rule: Govern is for holes and drift, not routine syncing.
 
 ## Non-Workflows
 
-- Initial migration from old support records into Notion is a one-time project.
+- Recreating a parallel Markdown knowledge base is out of scope.
 - Runtime setup for Telegram, Slack, OpenClaw, browser automation, cron, or CI is implementation detail.
 - Lore should not run background processes by itself.
