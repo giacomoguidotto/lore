@@ -20,6 +20,57 @@ Lore keeps agents pointed at the right source of truth. Notion owns the actual p
 
 Generated files under `dist/` are reviewable outputs, not canonical records.
 
+## Workflow Map
+
+Lore sits between the canonical Notion workspace and the agents that need safe,
+scoped context from it.
+
+```mermaid
+flowchart LR
+    notion(("Notion<br/>source of truth"))
+    lore["Lore<br/>workflows, skills,<br/>policies, artifacts"]
+    codex["Codex runs<br/>capture, sync,<br/>govern"]
+    codexMemory[("Codex Memory<br/>small routing facts")]
+    chatgpt["chatgpt.com<br/>ChatGPT Memory Digest"]
+    portfolio["Portfolio<br/>public Notion-backed facts"]
+    approval{"Giacomo<br/>approval"}
+    clarify{"Clarification<br/>request"}
+
+    notion -- "live reads" --> codex
+    codex -- "draft updates" --> approval
+    approval -- "approved writes" --> notion
+
+    notion -- "diffs and selected facts" --> lore
+    lore -- "rules and safe exports" --> codex
+    codex -- "validated patches and PRs" --> lore
+
+    lore -- "routing-safe digest" --> codexMemory
+    codexMemory -- "pointers and preferences" --> codex
+
+    lore -- "reviewable digest" --> chatgpt
+    chatgpt -. "keeps pointing back to canonical facts" .-> notion
+
+    notion -- "profile, project, career facts" --> portfolio
+    lore -. "export-safe data or generated UI" .-> portfolio
+    portfolio -. "missing or stale claims" .-> clarify
+    lore -. "ambiguous state" .-> clarify
+    clarify -- "answers land in Notion" --> notion
+
+    classDef source fill:#fff7cc,stroke:#d39e00,stroke-width:2px,color:#1f2937;
+    classDef gateway fill:#ddf7ef,stroke:#159570,stroke-width:2px,color:#12372f;
+    classDef runtime fill:#e8edff,stroke:#5267d8,stroke-width:2px,color:#172554;
+    classDef memory fill:#f3e8ff,stroke:#8b5cf6,stroke-width:2px,color:#3b0764;
+    classDef product fill:#ffe7e2,stroke:#e66b5b,stroke-width:2px,color:#431407;
+    classDef decision fill:#f8fafc,stroke:#64748b,stroke-width:2px,color:#0f172a;
+
+    class notion source;
+    class lore gateway;
+    class codex runtime;
+    class codexMemory,chatgpt memory;
+    class portfolio product;
+    class approval,clarify decision;
+```
+
 ## What's Inside
 
 - `skills/`: repo-owned agent workflows.
