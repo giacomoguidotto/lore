@@ -20,6 +20,8 @@ Interactive life-context capture uses `skills/grill-knowledge`: grill one questi
 
 Trigger: scheduled agent run, or manual run.
 
+Manual trigger: use `skills/get-knowledge`, starting with `/get-knowledge`.
+
 Flow: read the Notion diff since the last accepted snapshot; detect incomplete or ambiguous state; create Clarification Requests through the configured medium such as Telegram or Slack; wait for answers when needed; write the resulting snapshot, diff, and context packs to this repo; validate; open a PR that requires Giacomo's approval.
 
 Rule: Sync may run even when there is no Notion diff if unresolved Clarification Requests or ambiguous states exist.
