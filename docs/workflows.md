@@ -4,7 +4,7 @@ Lore defines workflows; external runtimes execute them. Notion remains the sourc
 
 ## 1. Capture
 
-Trigger: manual Codex command, starting with `/dump-knowledge`; `/update-knowledge` may remain an alias.
+Trigger: manual Codex command, starting with `/dump-knowledge`
 
 Flow: use `skills/dump-knowledge`; inspect the live target Notion database; summarize the coding session's progress, decisions, tasks, blockers, and follow-ups; ask Giacomo to confirm the draft; write the approved update to Notion.
 
