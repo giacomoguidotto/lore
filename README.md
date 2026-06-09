@@ -84,15 +84,8 @@ flowchart LR
 - Notion is canonical.
 - Lore defines workflows; external runtimes execute them.
 - Agents narrow-load only the docs or artifacts needed for the task.
+- Codex memory should keep routing facts and preferences, not Notion content.
 - Public artifacts must not include private Notion material without explicit approval.
-
-## Tooling
-
-Lore is currently a docs, skills, and artifact repository. Validate changes with:
-
-```sh
-git diff --check
-```
 
 ## Contributing
 

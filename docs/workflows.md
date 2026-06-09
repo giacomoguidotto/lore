@@ -28,7 +28,13 @@ Rule: Sync may run even when there is no Notion diff if unresolved Clarification
 
 ## 2a. Codex Sync
 
-Codex Sync is a no-op. Codex should follow its instructions, consult Lore only when needed, and narrow-load the repo's validated context packs or support docs.
+Codex Sync is a no-op. Codex memory should stay small: routing facts, durable preferences, and pointers back to Notion.
+
+Default flow: when the current task may depend on personal, task, project, finance, profile, or portfolio facts, Codex should perform a narrow live Notion lookup, read only relevant pages or rows, internalize the task-relevant facts, and keep working.
+
+Rule: use `skills/get-knowledge` only when Giacomo explicitly asks to refresh from Notion or when a normal narrow lookup is not enough.
+
+Rule: context packs under `dist/` are scoped fallback artifacts or workflow outputs. They are not default preload and never override live Notion unless Giacomo identifies one as fresher.
 
 ## 2b. ChatGPT Sync
 
